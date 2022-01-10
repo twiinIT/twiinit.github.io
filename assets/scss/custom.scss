@@ -1,0 +1,21 @@
+header {
+    padding: 20px 0;
+}
+
+header.header-sticky-top {
+    padding: 0;
+}
+
+header.header-unpinned {
+    transform: none;
+}
+
+.header-height-fix {
+    height: 108px;
+}
+
+@media (max-width: 991px) {
+    .header-height-fix {
+        height: 108px;
+    }
+}

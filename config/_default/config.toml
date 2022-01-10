@@ -1,0 +1,44 @@
+######################## default configuration ####################
+baseURL = "https://twiinit.rhiobet.sh/"
+title = "twiinIT"
+theme = "andromeda-light"
+black = "#999999"
+
+############################# Modules ##############################
+[module]
+[module.hugoVersion]
+extended = true
+min = "0.83.1"
+
+############################# Outputs ##############################
+[outputs]
+home = ["HTML", "RSS", "WebAppManifest"]
+
+[imaging]
+quality = 90
+
+[caches]
+[caches.images]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[caches.assets]
+dir = ":resourceDir/_gen"
+maxAge = "720h"
+
+[markup]
+[markup.goldmark.renderer]
+unsafe= true
+
+[mediaTypes]
+[mediaTypes."application/manifest+json"]
+suffixes = ["webmanifest"]
+
+[mediaTypes."text/netlify"]
+delimiter = ""
+suffixes = [""]
+
+[outputFormats]
+[outputFormats.WebAppManifest]
+mediaType = "application/manifest+json"
+rel = "manifest"
