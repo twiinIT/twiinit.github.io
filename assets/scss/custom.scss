@@ -19,3 +19,9 @@ header.header-unpinned {
         height: 108px;
     }
 }
+
+@media (max-width: 767px) {
+    header .navbar-brand img {
+	height: auto;
+    }
+}
