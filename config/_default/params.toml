@@ -52,7 +52,9 @@ preloader = "images/favicon.png" # use jpg, png, svg or gif format.
 
 # Navigation button
 [navigation_button]
-enable = false
+enable = true
+label = "Try our tools!"
+link = "https://lab.twiinit.com/"
 
 # cookies
 [cookies]
