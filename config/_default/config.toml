@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://twiinit.rhiobet.sh/"
+baseURL = "https://twiinit.github.io/"
 title = "twiinIT"
 theme = "andromeda-light"
 black = "#999999"
