@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://twiinit.github.io/"
+baseURL = "https://twiinit.com/"
 title = "twiinIT"
 theme = "andromeda-light"
 black = "#999999"

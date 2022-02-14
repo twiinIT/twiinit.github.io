@@ -16,7 +16,7 @@ image = "images/logo.png" # this image will be used as fallback if a page has no
 # footer_info = "Lorem ipsum dolor sit sed dmi amet, consectetur adipiscing. Cdo tellus, sed condimentum volutpat."
 
 # contact form action
-contact_form_action = "https://formspree.io/" # contact form works with https://formspree.io
+contact_form_action = "https://formspree.io/f/mqknqebr" # contact form works with https://formspree.io
 
 # copyright
 copyright = "©twiinIT - 2022"
