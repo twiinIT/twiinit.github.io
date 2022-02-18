@@ -14,6 +14,16 @@ header.header-unpinned {
     height: 108px;
 }
 
+h1 em {
+   color: $primary-color; 
+   font-style: unset;
+   text-shadow: -2px -2px 1px $white, -2px -1px 1px $white, -2px 0px 1px $white, -2px 1px 1px $white, -2px 2px 1px $white,
+		-1px -2px 1px $white, -1px -1px 1px $white, -1px 0px 1px $white, -1px 1px 1px $white, -1px 2px 1px $white,
+                0px -2px 1px $white, 0px -1px 1px $white, 0px 0px 1px $white, 0px 1px 1px $white, 0px 2px 1px $white,
+                1px -2px 1px $white, 1px -1px 1px $white, 1px 0px 1px $white, 1px 1px 1px $white, 1px 2px 1px $white,
+		2px -2px 1px $white, 2px -1px 1px $white, 2px 0px 1px $white, 2px 1px 1px $white, 2px 2px 1px $white;
+}
+
 @media (max-width: 991px) {
     .header-height-fix {
         height: 108px;
