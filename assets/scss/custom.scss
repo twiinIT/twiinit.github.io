@@ -24,6 +24,11 @@ h1 em {
 		2px -2px 1px $white, 2px -1px 1px $white, 2px 0px 1px $white, 2px 1px 1px $white, 2px 2px 1px $white;
 }
 
+.icon i {
+    font-size: 50px;
+    line-height: 70px;
+}
+
 @media (max-width: 991px) {
     .header-height-fix {
         height: 108px;
