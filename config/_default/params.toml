@@ -6,10 +6,10 @@ logo = "images/twiinIT_logo_left_no_subtitle.svg"
 # use `x` with logo_width, example: "100x"
 logo_width = "150x"
 # logo text will only show when logo is missing.
-logo_text = "Andromeda"
+logo_text = "twiinIT"
 # OpenGraph / Twitter Card metadata
-description = "This is meta description"
-author = "Themefisher"
+description = "Digital twins to understand, design, and operate your products"
+author = "twiinIT"
 image = "images/logo.png" # this image will be used as fallback if a page has no image of its own
 
 # footer information

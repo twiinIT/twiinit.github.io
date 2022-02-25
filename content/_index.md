@@ -1,7 +1,7 @@
 ---
 # banner
 banner:
-  title: "Leveraging Collaboration in Systems Engineering"
+  title: "Digital twins to *understand*, *design*, and *operate* your products"
   button: "Our Vision"
   button_link: "#"
 
