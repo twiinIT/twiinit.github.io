@@ -1,25 +1,27 @@
 <article class="card blog-card">
-  <a href="{{ .Params.article_url }}" title="{{ .Title }}">
+  <a href="{{ .Params.article_url }}" title="{{ .Title }}" target="_blank">
     {{ if .Params.image }}
-      {{ with .Params.image }}
-      {{ if fileExists (add `assets/` .) }}
-      {{$img:= resources.Get . }}
-      {{$img:= $img.Resize "570x "}}
-      {{$imgWebp:= $img.Resize "570x webp"}}
-      <img loading="lazy" decoding="async" class="card-img-top h-auto" width="{{$img.Width}}" height="{{$img.Height}}"
-        src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
-      {{else}}
-      <img class="img-fluid" src="https://via.placeholder.com/570x380.png/eee/eee" alt="image-fallback">
-      {{end}}
-      {{end}}
-    {{ else if .Params.image_url }}
-      <img loading="lazy" decoding="async" class="card-img-top h-auto" width="570" src="{{.Params.image_url}}" alt="blog-post">
+    {{ with .Params.image }}
+    {{ if fileExists (add `assets/` .) }}
+    {{$img:= resources.Get . }}
+    {{$img:= $img.Resize "570x "}}
+    {{$imgWebp:= $img.Resize "570x webp"}}
+    <img loading="lazy" decoding="async" class="card-img-top h-auto" width="{{$img.Width}}" height="{{$img.Height}}"
+      src="{{$imgWebp.RelPermalink}}" alt="blog-post" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
     {{else}}
-      <img class="img-fluid" src="https://via.placeholder.com/570x380.png/eee/eee" alt="image-fallback">
+    <img class="img-fluid" src="https://via.placeholder.com/570x380.png/eee/eee" alt="image-fallback">
+    {{end}}
+    {{end}}
+    {{ else if .Params.image_url }}
+    <img loading="lazy" decoding="async" class="card-img-top h-auto" width="570" src="{{.Params.image_url}}"
+      alt="blog-post">
+    {{else}}
+    <img class="img-fluid" src="https://via.placeholder.com/570x380.png/eee/eee" alt="image-fallback">
     {{ end }}
   </a>
   <div class="card-body">
-    <h3 class="card-title"><a href="{{ .Params.article_url }}" title="{{ .Title }}">{{ .Title }}</a></h3>
+    <h3 class="card-title"><a href="{{ .Params.article_url }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
+    </h3>
     <p>{{ .Content }}</p>
   </div>
   <div class="card-footer bg-transparent border-top-0">
@@ -31,7 +33,8 @@
           {{ $img:= resources.Get (.image) }}
           {{ $img:= $img.Fill "70x70" }}
           {{ $imgWebp:= $img.Fill "70x70 webp" }}
-          <img loading="lazy" decoding="async" class="rounded-circle" src="{{ $imgWebp.RelPermalink }}" alt="author image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          <img loading="lazy" decoding="async" class="rounded-circle" src="{{ $imgWebp.RelPermalink }}"
+            alt="author image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
           {{ end }}
         </div>
         {{ end }}
@@ -39,7 +42,8 @@
           {{ with .Params.author_info }}
           <p class="font-weight-500 mb-0 h5">{{ .name }}</p>
           {{ end }}
-	  <span>{{.PublishDate.Format "Jan 02, 2006"}}{{if site.Params.reading_time}} - {{.Params.author}}{{end}}</span>
+          <span>{{.PublishDate.Format "Jan 02, 2006"}}{{if site.Params.reading_time}} -
+            {{.Params.reading_time}} read{{end}}</span>
         </div>
       </div>
     </div>
