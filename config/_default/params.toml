@@ -67,6 +67,21 @@ button = "I Accept"
 [cta]
 enable = false
 
+[[plugins.js]]
+link = "plugins/jquery/jquery.min.js"
+[[plugins.js]]
+link = "plugins/bootstrap/bootstrap.min.js"
+[[plugins.js]]
+link = "plugins/aos/aos.js"
+[[plugins.js]]
+link = "plugins/swiper/swiper-bundle.min.js"
+[[plugins.js]]
+link = "plugins/rellax/rellax.min.js"
+[[plugins.js]]
+link = "plugins/webfont-loader/webfont-loader-2.min.js"
+[[plugins.js]]
+link = "plugins/animejs/anime.min.js"
+
 ############################# social site ########################
 #[[social]]
 #title = "Andromeda"
