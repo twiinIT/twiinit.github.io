@@ -83,7 +83,7 @@ link = "plugins/webfont-loader/webfont-loader-2.min.js"
 link = "plugins/animejs/anime.min.js"
 
 ############################# social site ########################
-#[[social]]
-#title = "Andromeda"
-#icon = "lab la-facebook-f" # https://icons8.com/line-awesome
-#link = "#!"
+[[social]]
+title = "LinkedIn"
+icon = "lab la-linkedin-in" # https://icons8.com/line-awesome
+link = "https://www.linkedin.com/company/twiinit/"

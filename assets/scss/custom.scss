@@ -41,6 +41,36 @@ h1 em {
     line-height: 70px;
 }
 
+.social-links a {
+    width: 4rem;
+    height: 4rem;
+    font-size: 2.5rem;
+    line-height: 4rem;
+    border-radius: 8px;
+}
+
+.social-widget {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    .block {
+      padding: 25px 25px;
+      border-radius: 12px;
+      box-shadow: 0px 4px 25px 0px rgba($black, 0.05);
+  
+      @include mobile {
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+  
+      ul li {
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+  
+
 @media (max-width: 1466px) {
     .banner .block {
         padding: 60px 30px 40px;
