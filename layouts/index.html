@@ -219,6 +219,21 @@
           <h2 class="title">Get In Touch</h2>
         </div>
       </div>
+
+      <div class="col-lg-8 col-md-10 social-widget" data-aos="fade-up" data-aos-delay="200">
+        <div class="block text-center">
+          {{ with site.Params.social}}
+          <ul class="social-links list-inline">
+            {{ range .}}
+            <li class="list-inline-item"><a href="{{.link}}" title="{{.title}}" target="_blank">
+              <i class="{{.icon}}"></i>
+            </a></li>
+            {{end}}
+          </ul>
+          {{end}}  
+        </div>
+      </div>
+
       {{with site.Params.contact_info.phone}}
       <div class="col-xl-3 col-lg-4 col-md-6 contact-widget" data-aos="fade-up">
         <div class="block text-center">
@@ -249,20 +264,6 @@
       </div>
       {{end}}
 
-      {{with site.Params.social}}
-      <div class="col-xl-3 col-lg-4 col-md-12 contact-widget" data-aos="fade-up" data-aos-delay="200">
-        <div class="block text-center">
-          <h3 class="mb-4">Social Media</h3>
-          <ul class="list-unstyled">
-            {{range .}}
-            {{if .}}
-            <li><a href="{{.link}}"><i class="{{.icon}}"></i>{{.title}}</a></li>
-            {{end}}
-            {{end}}
-          </ul>
-        </div>
-      </div>
-      {{end}}
       <!--<div class="col-lg-5 col-md-8 text-center mb-5 mb-lg-0" data-aos="fade-up">
         <div class="pr-0 pr-lg-5">
           {{ if fileExists (add `assets/` .Params.contact_image) }}
