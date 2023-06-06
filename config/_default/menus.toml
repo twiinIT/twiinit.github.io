@@ -20,6 +20,11 @@ url = "#contact"
 weight = 5
 
 [[main]]
+name = "Videos"
+url = "videos/"
+weight = 7
+
+[[main]]
 name = "Blog"
 url = "blog/"
 weight = 9
