@@ -2,5 +2,5 @@
 name: "Gaétan Laurens"
 designation: "Scientific Software Engineer"
 image: "images/team/gaetan.jpg"
-weight: 6
+weight: 3
 ---
