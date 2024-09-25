@@ -220,7 +220,7 @@
     </div>
     <div class="row justify-content-around">
       {{range sort .Resources "Params.weight"}}
-      <div class="col-lg-2 col-md-2 col-2">
+      <div class="col-lg-2 col-md-3 col-3">
         <div class="team-item text-center">
           <div class="team-image">
             {{ if fileExists (add `assets/` .Params.image) }}
@@ -255,29 +255,34 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-md-12" data-aos="fade-left">
+      <div class="col-md-12 text-center" data-aos="fade-in">
         <div class="brand-carousel swiper-container">
-          <div class="swiper-wrapper">
+          <div class="swiper-wrapper align-items-center">
             {{range .Resources}}
             {{if fileExists (add `assets/` .Params.image)}}
-            <div class="swiper-slide">
+            <div class="swiper-slide" disableOnInteraction="false">
               <div class="brand-item">
                 {{$img:= resources.Get .Params.image}}
                 {{$img_width := $img.Width }}
+                
+                {{$box_width := "400"}}
+                {{$box_height := "200"}}
+                {{$box_aspect := add (add (string $box_width) "x") (string $box_height)}}
 
-                {{$img_orginal := add (add (string $img_width) "x") " " }}
-                {{$img_src := ($img.Resize $img_orginal).RelPermalink }}
+                {{$img_src := ($img.Fit $box_aspect).RelPermalink }}
 
-                {{$imgWebp := add (add (string $img_width) "x") " webp" }}
-                {{$imgWebp_src := ($img.Resize $imgWebp).RelPermalink }}
+                {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
+                
                 <a href="{{.Params.external_url}}" target="_blank">
-                  <img loading="lazy" decoding="async" class="img-fluid" width="{{$img_width}}" height="{{$img.Height}}"
+                  <img loading="lazy" decoding="async" class="img-fluid" height="{{$box_height}}"
                     src="{{$imgWebp_src}}" alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'">
                 </a>
               </div>
             </div>
             {{end}}
             {{end}}
+            
+            
           </div>
         </div>
       </div>
