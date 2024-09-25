@@ -170,6 +170,42 @@
 </section>
 {{end}}
 
+{{with .Site.GetPage "advisors"}}
+<section class="section" id="team">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title text-center" data-aos="fade-in">
+          <p class="text-uppercase">{{.Params.subtitle | markdownify}}</p>
+          <h2 class="title">{{.Params.title | markdownify}}</h2>
+          <p>{{.Params.description | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-around">
+      {{range sort .Resources "Params.weight"}}
+      <div class="col-lg-3 col-md-4 col-6">
+        <div class="team-item text-center">
+          <div class="team-image">
+            {{ if fileExists (add `assets/` .Params.image) }}
+            {{$img:= resources.Get .Params.image }}
+            {{$img:= $img.Resize "175x "}}
+            {{$imgWebp:= $img.Resize "175x webp"}}
+            <img loading="lazy" decoding="async" class="w-100 img-fluid rounded-circle" width="{{$img.Width}}"
+              height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Team Image"
+              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+            {{end}}
+          </div>
+          <h3>{{.Params.name | markdownify}}</h3>
+          <p>{{.Params.designation | markdownify}}</p>
+        </div>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</section>
+{{end}}
+
 {{with .Site.GetPage "we_worked_together"}}
 <section class="section" id="team">
   <div class="container">
