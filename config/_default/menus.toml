@@ -25,6 +25,11 @@ url = "videos/"
 weight = 7
 
 [[main]]
+name = "Portfolio"
+url = "portfolio/"
+weight = 8
+
+[[main]]
 name = "Blog"
 url = "blog/"
 weight = 9
