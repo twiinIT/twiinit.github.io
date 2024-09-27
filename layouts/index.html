@@ -206,10 +206,57 @@
 </section>
 {{end}}
 
-
-
 {{with .Site.GetPage "partners"}}
 <section class="section" id="partners">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="section-title text-center" data-aos="fade-in">
+          <p class="text-uppercase">{{.Params.subtitle | markdownify}}</p>
+          <h2 class="title">{{.Params.title | markdownify}}</h2>
+          <p>{{.Params.description | markdownify}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 text-center" data-aos="fade-in">
+        <div class="brand-carousel swiper-container">
+          <div class="swiper-wrapper align-items-center">
+            {{range .Resources}}
+            {{if fileExists (add `assets/` .Params.image)}}
+            <div class="swiper-slide" disableOnInteraction="false">
+              <div class="brand-item">
+                {{$img:= resources.Get .Params.image}}
+                {{$img_width := $img.Width }}
+                
+                {{$box_width := "400"}}
+                {{$box_height := "200"}}
+                {{$box_aspect := add (add (string $box_width) "x") (string $box_height)}}
+
+                {{$img_src := ($img.Fit $box_aspect).RelPermalink }}
+
+                {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
+                
+                <a href="{{.Params.external_url}}" target="_blank">
+                  <img loading="lazy" decoding="async" class="img-fluid" height="{{$box_height}}"
+                    src="{{$imgWebp_src}}" alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'">
+                </a>
+              </div>
+            </div>
+            {{end}}
+            {{end}}
+            
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{{end}}
+
+{{with .Site.GetPage "support"}}
+<section class="section" id="support">
   <div class="container">
     <div class="row">
       <div class="col-12">
