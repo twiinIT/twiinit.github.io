@@ -50,12 +50,6 @@ quality = 100
 enable = true
 preloader = "images/favicon.png" # use jpg, png, svg or gif format.
 
-# Navigation button
-[navigation_button]
-enable = true
-label = "Try our tools!"
-link = "https://hub.twiinit.com/"
-
 # cookies
 [cookies]
 enable = false
