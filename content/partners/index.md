@@ -1,5 +1,5 @@
 ---
-subtitle: "Our Partners"
+subtitle: "Our Clients"
 title: "The organisations we work with"
 headless: true
 ---
