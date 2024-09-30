@@ -11,7 +11,7 @@ weight = 3
 
 [[main]]
 name = "Partners"
-url = "#partners"
+url = "#customers"
 weight = 4
 
 [[main]]
