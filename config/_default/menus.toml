@@ -15,9 +15,14 @@ url = "#partners"
 weight = 4
 
 [[main]]
-name = "Contact"
-url = "#contact"
+name = "Portfolio"
+url = "portfolio/"
 weight = 5
+
+[[main]]
+name = "Blog"
+url = "blog/"
+weight = 6
 
 [[main]]
 name = "Videos"
@@ -25,14 +30,9 @@ url = "videos/"
 weight = 7
 
 [[main]]
-name = "Portfolio"
-url = "portfolio/"
+name = "Contact"
+url = "#contact"
 weight = 8
-
-[[main]]
-name = "Blog"
-url = "blog/"
-weight = 9
 
 # footer menu
 #[[footer]]
