@@ -5,18 +5,13 @@ subtitle: "Efficient turbine design made open-source"
 draft: false
 image: "images/portfolio/pyturbo_icon.gif"
 weight: 1
-article_url: "portfolio/2023/pyturbo"
+article_url: "2023/pyturbo"
 ---
-
-<div class='row'>
-    <div class='col-7 '>
 
 ### Objectives
 
 - Demonstrate modelling and design capabilities based on CoSApp.
-
 - Provide a turbofan Open-Source library for training and as a base block of advanced simulations workflows.
-
 
 ### Outlook
 
@@ -26,16 +21,20 @@ article_url: "portfolio/2023/pyturbo"
 ### Current status
 
 - A turbofan (2 shafts) architecture is covered from single physics/components to the full product, using modular intermediate assemblies.
-
 - Multiple off-design and design strategies are available as numerical workflows.
 
+<div class='row'>
+<div class='col-lg-5 col-md-5 col-12' text-align='center'>
+    <div class='imgbox'>
+        {{<figure src=pyturbo_icon.gif width="100%" class="center-fit">}}
     </div>
-    <div class='col-5' text-align='center'>
-        <div class='row'>
-            {{<figure src=/images/portfolio/pyturbo_icon.gif width="500">}}
-        </div>
-        <div class='row'>
-            {{<figure src=/images/portfolio/pyturbo_aircraft.png width="500">}}
-        </div>
+    <center><p> Turbine being manipulated by the user and recalculated live.</p></center>
+</div>
+<div class='col-lg-7 col-md-7 col-12' text-align='center'>
+    <div class='imgbox'>
+        {{<figure src=pyturbo_aircraft.png width="100%">}}
     </div>
+    <center><p> Aircraft digital twin with equiped with the engine above.</p></center>
+</div>
+</div>
 </div>
