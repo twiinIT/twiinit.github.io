@@ -3,12 +3,10 @@ year: 2024
 title: "Elixair Excel addin"
 subtitle: "Fast design for climatisation projects"
 draft: false
-image: "images/portfolio/elixair_video.gif"
-weight: 1
-article_url: "2024/elixair"
+image: "/images/portfolio/elixair_video.gif"
+weight: 3
+article_url: "./2024/elixair"
 ---
-<div class='row'>
-<div class='col-lg-5 col-md-12 col-12' text-align='center'>
 
 ### Objectives
 
@@ -26,12 +24,19 @@ article_url: "2024/elixair"
 - Everything you need is gathered on the same page and available just a click away.
 - The digital twin engine is tested and robust. It is even extensible if you need to connect new tool to it!
 
-</div>
+<div class='row'>
 <div class='col-lg-7 col-md-12 col-12' text-align='center'>
     <div class='imgbox'>
         {{<figure src=elixair_video.gif width="100%" class="center-fit">}}
     </div>
     <center><p> Reduced version of the Elixair spreadsheet and user interaction.</p></center>
+</div>
+<div class='col-lg-5 col-md-12 col-12' text-align='center'>
+
+> Our project to develop a thermal pre-sizing software for climatic wells with TwiinIT went very well. The team is very responsive and attentive. They delved into the subject in depth to meet our expectations. I recommend. <br>
+> <br>
+> _Charles Aumercier, project manager at PAM Building_
+
 </div>
 </div>
 </div>
