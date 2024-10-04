@@ -3,9 +3,9 @@ year: 2023
 title: "pyturbo library"
 subtitle: "Efficient turbine design made open-source"
 draft: false
-image: "images/portfolio/pyturbo_icon.gif"
+image: "/images/portfolio/pyturbo_icon.gif"
 weight: 1
-article_url: "portfolio/2023/pyturbo"
+article_url: "./2023/pyturbo"
 ---
 
 ### Objectives
