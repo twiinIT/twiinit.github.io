@@ -10,13 +10,9 @@ article_url: "./2023/pyturbo"
 
 ### Objectives
 
-- Demonstrate modelling and design capabilities based on CoSApp.
+- Demonstrate modeling and design capabilities based on CoSApp.
 - Provide a turbofan Open-Source library for training and as a base block of advanced simulations workflows.
 
-### Outlook
-
-- Add alternative modelings, architectures.
-- Improve the learning experience with beginner to advanced tutorials.
 
 ### Current status
 
@@ -28,13 +24,18 @@ article_url: "./2023/pyturbo"
     <div class='imgbox'>
         {{<figure src=pyturbo_icon.gif width="100%" class="center-fit">}}
     </div>
-    <center><p> Turbine being manipulated by the user and recalculated live.</p></center>
+    <center><p> Turbofan engine being scaled by the user in real time.</p></center>
 </div>
 <div class='col-lg-7 col-md-7 col-12' text-align='center'>
     <div class='imgbox'>
         {{<figure src=pyturbo_aircraft.png width="100%">}}
     </div>
-    <center><p> Aircraft digital twin with equiped with the engine above.</p></center>
+    <center><p> Aircraft digital twin mounted with 2 turbofans.</p></center>
 </div>
 </div>
 </div>
+
+### Outlook
+
+- Add alternative modelings, architectures.
+- Improve the learning experience with beginner to advanced tutorials.
