@@ -1,7 +1,7 @@
 ---
 year: 2023
 title: "pyturbo library"
-subtitle: "Efficient turbine design made open-source"
+subtitle: "Turbofan design made Open-Source"
 draft: false
 image: "/images/portfolio/pyturbo_icon.gif"
 weight: 1
