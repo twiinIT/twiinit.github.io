@@ -1,2 +1,23 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Portfolio on twiinIT</title><link>https://twiinit.com/portfolio/</link><description>Recent content in Portfolio on twiinIT</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://twiinit.com/portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>pyturbo library</title><link>https://twiinit.com/portfolio/2023/pyturbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://twiinit.com/portfolio/2023/pyturbo/</guid><description>Objectives Demonstrate modeling and design capabilities based on CoSApp. Provide a turbofan Open-Source library for training and as a base block of advanced simulations workflows. Current status A turbofan (2 shafts) architecture is covered from single physics/components to the full product, using modular intermediate assemblies. Multiple off-design and design strategies are available as numerical workflows. Turbofan engine being scaled by the user in real time.
-Aircraft digital twin mounted with 2 turbofans.</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Portfolio on twiinIT</title><link>https://twiinit.com/portfolio/</link><description>Recent content in Portfolio on twiinIT</description><generator>Hugo</generator><language>en</language><atom:link href="https://twiinit.com/portfolio/index.xml" rel="self" type="application/rss+xml"/><item><title>pyturbo library</title><link>https://twiinit.com/portfolio/2023/pyturbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://twiinit.com/portfolio/2023/pyturbo/</guid><description>&lt;h3 id="objectives">Objectives&lt;/h3>
+&lt;ul>
+&lt;li>Demonstrate modeling and design capabilities based on CoSApp.&lt;/li>
+&lt;li>Provide a turbofan Open-Source library for training and as a base block of advanced simulations workflows.&lt;/li>
+&lt;/ul>
+&lt;h3 id="current-status">Current status&lt;/h3>
+&lt;ul>
+&lt;li>A turbofan (2 shafts) architecture is covered from single physics/components to the full product, using modular intermediate assemblies.&lt;/li>
+&lt;li>Multiple off-design and design strategies are available as numerical workflows.&lt;/li>
+&lt;/ul>
+&lt;h3 id="outlook">Outlook&lt;/h3>
+&lt;ul>
+&lt;li>Add alternative modelings, architectures.&lt;/li>
+&lt;li>Improve the learning experience with beginner to advanced tutorials.&lt;/li>
+&lt;/ul>
+&lt;div class='row'>
+&lt;div class='col-lg-5 col-md-5 col-12' text-align='center'>
+ &lt;div class='imgbox'>
+ &lt;figure class="center-fit">&lt;img src="https://twiinit.com/images/portfolio/pyturbo_icon.gif" width="100%">
+ &lt;/figure>
+
+ &lt;/div>
+ &lt;center>&lt;p> Turbofan engine being scaled by the user in real time.&lt;/p></description></item></channel></rss>
