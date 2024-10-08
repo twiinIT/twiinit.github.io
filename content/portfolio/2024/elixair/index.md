@@ -5,7 +5,7 @@ subtitle: "Fast design for climatisation projects"
 draft: false
 image: "/images/portfolio/elixair_video.gif"
 weight: 3
-article_url: "./2024/elixair"
+article_url: "/portfolio/2024/elixair"
 ---
 
 ### Objectives
@@ -27,7 +27,7 @@ article_url: "./2024/elixair"
 <div class='row'>
 <div class='col-lg-7 col-md-12 col-12' text-align='center'>
     <div class='imgbox'>
-        {{<figure src=elixair_video.gif width="100%" class="center-fit">}}
+        {{<figure src=/images/portfolio/elixair_video.gif width="100%" class="center-fit">}}
     </div>
     <center><p> Reduced version of the Elixair spreadsheet and user interaction.</p></center>
 </div>
