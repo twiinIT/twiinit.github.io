@@ -26,13 +26,13 @@ article_url: "/portfolio/2023/pyturbo"
 <div class='row'>
 <div class='col-lg-5 col-md-5 col-12' text-align='center'>
     <div class='imgbox'>
-        {{<figure src=/portfolio/2023/pyturbo/pyturbo_icon.gif width="100%" class="center-fit">}}
+        {{<figure src=/images/portfolio/pyturbo_icon.gif width="100%" class="center-fit">}}
     </div>
     <center><p> Turbofan engine being scaled by the user in real time.</p></center>
 </div>
 <div class='col-lg-7 col-md-7 col-12' text-align='center'>
     <div class='imgbox'>
-        {{<figure src=/portfolio/2023/pyturbo/pyturbo_aircraft.png width="100%">}}
+        {{<figure src=/images/portfolio/pyturbo_aircraft.png width="100%">}}
     </div>
     <center><p> Aircraft digital twin mounted with 2 turbofans.</p></center>
 </div>
