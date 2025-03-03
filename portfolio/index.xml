@@ -20,4 +20,28 @@
  &lt;/figure>
 
  &lt;/div>
- &lt;center>&lt;p> Turbofan engine being scaled by the user in real time.&lt;/p></description></item></channel></rss>
+ &lt;center>&lt;p> Turbofan engine being scaled by the user in real time.&lt;/p></description></item><item><title>Elixair Excel addin</title><link>https://twiinit.com/portfolio/2024/elixair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://twiinit.com/portfolio/2024/elixair/</guid><description>&lt;h3 id="objectives">Objectives&lt;/h3>
+&lt;ul>
+&lt;li>Provide standardized and templated spreadsheets interfaced with our simulation tool.&lt;/li>
+&lt;li>A digital twin of a climatic sink based on standard models to compute energy savings during a year.&lt;/li>
+&lt;/ul>
+&lt;h3 id="the-spreadsheet">The spreadsheet&lt;/h3>
+&lt;ul>
+&lt;li>From few inputs, the user instantly gets the results of the simulation embedded in their spreadsheet (outlet temperature, energy savings and head losses).&lt;/li>
+&lt;li>They know that it respects the standard they have to follow and is able to export all the results directly within a templated report.&lt;/li>
+&lt;li>Extended language support in French, English, German and Spanish in just one click.&lt;/li>
+&lt;/ul>
+&lt;h3 id="outlook">Outlook&lt;/h3>
+&lt;ul>
+&lt;li>A fully customised tool that you can easily control.&lt;/li>
+&lt;li>Everything you need is gathered on the same page and available just a click away.&lt;/li>
+&lt;li>The digital twin engine is tested and robust. It is even extensible if you need to connect new tool to it!&lt;/li>
+&lt;/ul>
+&lt;div class='row'>
+&lt;div class='col-lg-7 col-md-12 col-12' text-align='center'>
+ &lt;div class='imgbox'>
+ &lt;figure class="center-fit">&lt;img src="https://twiinit.com/images/portfolio/elixair_video.gif" width="100%">
+ &lt;/figure>
+
+ &lt;/div>
+ &lt;center>&lt;p> Reduced version of the Elixair spreadsheet and user interaction.&lt;/p></description></item></channel></rss>
