@@ -1,0 +1,35 @@
+# English main menu
+[[main]]
+name = "Services"
+url = "#services"
+weight = 2
+
+[[main]]
+name = "Team"
+url = "#team"
+weight = 3
+
+[[main]]
+name = "Partners"
+url = "#customers"
+weight = 4
+
+[[main]]
+name = "Portfolio"
+url = "portfolio/"
+weight = 5
+
+[[main]]
+name = "Blog"
+url = "blog/"
+weight = 6
+
+[[main]]
+name = "Videos"
+url = "videos/"
+weight = 7
+
+[[main]]
+name = "Contact"
+url = "#contact"
+weight = 8 
