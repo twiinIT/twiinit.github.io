@@ -1,5 +1,5 @@
 <article class="card blog-card">
-  <a href="{{ .Params.article_url }}" title="{{ .Title }}" target="_blank">
+  <a href="{{ .RelPermalink }}" title="{{ .Title }}">
     {{ if .Params.image }}
     {{ with .Params.image }}
     {{ if fileExists (add `assets/` .) }}
@@ -20,7 +20,7 @@
     {{ end }}
   </a>
   <div class="card-body">
-    <h3 class="card-title"><a href="{{ .Params.article_url }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
+    <h3 class="card-title"><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a>
     </h3>
     <p>{{ .Content }}</p>
   </div>
@@ -31,10 +31,12 @@
         <div class="user-image mr-3">
           {{ if .image }}
           {{ $img:= resources.Get (.image) }}
+          {{ if $img }}
           {{ $img:= $img.Fill "70x70" }}
           {{ $imgWebp:= $img.Fill "70x70 webp" }}
           <img loading="lazy" decoding="async" class="rounded-circle" src="{{ $imgWebp.RelPermalink }}"
             alt="author image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{ end }}
           {{ end }}
         </div>
         {{ end }}

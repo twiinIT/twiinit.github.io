@@ -50,9 +50,13 @@ defaultContentLanguageInSubdir = false
   [languages.fr]
     languageName = "Français"
     weight = 1
+
+    [languages.fr.params]
     flag = "🇫🇷"
 
   [languages.en]
     languageName = "English"
     weight = 2
+
+    [languages.en.params]
     flag = "🇬🇧"
