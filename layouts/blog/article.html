@@ -1,5 +1,5 @@
 <article class="card blog-card">
-  <a href="{{ .RelPermalink }}" title="{{ .Title }}" target="_blank">
+  <a href="{{ .Params.article_url }}" title="{{ .Title }}" target="_blank">
     {{ if .Params.image }}
     {{ with .Params.image }}
     {{ if fileExists (add `assets/` .) }}
@@ -20,7 +20,7 @@
     {{ end }}
   </a>
   <div class="card-body">
-    <h3 class="card-title"><a href="{{ .RelPermalink }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
+    <h3 class="card-title"><a href="{{ .Params.article_url }}" title="{{ .Title }}" target="_blank">{{ .Title }}</a>
     </h3>
     <p>{{ .Content }}</p>
   </div>
