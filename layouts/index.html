@@ -3,7 +3,10 @@
   <div class="container-xxl">
     <div class="row text-center">
       <div class="col-12">
-        <div class="block row justify-content-center no-gutters" data-aos="fade-up">
+        <div
+          class="block row justify-content-center no-gutters"
+          data-aos="fade-up"
+        >
           <div class="col-lg-10 px-0 px-xl-4" data-rellax-speed="-3">
             <h1 class="mb-4" data-aos="fade-up">{{.title | markdownify}}</h1>
             <!--<a href="{{.button_link}}" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">{{.button}}</a>-->
@@ -15,8 +18,15 @@
           <div class="row justify-content-center">
             <div class="col-lg-10">
               {{$img:= resources.Get . }} {{$img:= $img.Resize "1020x webp"}}
-              <img loading="lazy" decoding="async" class="w-100 img-fluid" width="{{$img.Width}}"
-                height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="Banner Image" />
+              <img
+                loading="lazy"
+                decoding="async"
+                class="w-100 img-fluid"
+                width="{{$img.Width}}"
+                height="{{$img.Height}}"
+                src="{{$img.RelPermalink}}"
+                alt="Banner Image"
+              />
             </div>
           </div>
         </div>
@@ -94,9 +104,16 @@
             {{ if fileExists (add `assets/` .Params.image) }} {{$img:=
             resources.Get .Params.image }} {{$img:= $img.Resize "175x "}}
             {{$imgWebp:= $img.Resize "175x webp"}}
-            <img loading="lazy" decoding="async" class="w-100 img-fluid rounded-circle" width="{{$img.Width}}"
-              height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Team Image"
-              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'" />
+            <img
+              loading="lazy"
+              decoding="async"
+              class="w-100 img-fluid rounded-circle"
+              width="{{$img.Width}}"
+              height="{{$img.Height}}"
+              src="{{$imgWebp.RelPermalink}}"
+              alt="Team Image"
+              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'"
+            />
             {{end}}
           </div>
           <h3>{{.Params.name | markdownify}}</h3>
@@ -127,9 +144,16 @@
             {{ if fileExists (add `assets/` .Params.image) }} {{$img:=
             resources.Get .Params.image }} {{$img:= $img.Resize "175x "}}
             {{$imgWebp:= $img.Resize "175x webp"}}
-            <img loading="lazy" decoding="async" class="w-100 img-fluid rounded-circle" width="{{$img.Width}}"
-              height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Team Image"
-              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'" />
+            <img
+              loading="lazy"
+              decoding="async"
+              class="w-100 img-fluid rounded-circle"
+              width="{{$img.Width}}"
+              height="{{$img.Height}}"
+              src="{{$imgWebp.RelPermalink}}"
+              alt="Team Image"
+              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'"
+            />
             {{end}}
           </div>
           <h3>{{.Params.name | markdownify}}</h3>
@@ -166,8 +190,15 @@
                 }} {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
 
                 <a href="{{.Params.external_url}}" target="_blank">
-                  <img loading="lazy" decoding="async" class="img-fluid" height="{{$box_height}}" src="{{$imgWebp_src}}"
-                    alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'" />
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    class="img-fluid"
+                    height="{{$box_height}}"
+                    src="{{$imgWebp_src}}"
+                    alt="Brand Image"
+                    onerror="this.onerror=null;this.src='{{$img_src}}'"
+                  />
                 </a>
               </div>
             </div>
@@ -204,8 +235,15 @@
                 }} {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
 
                 <a href="{{.Params.external_url}}" target="_blank">
-                  <img loading="lazy" decoding="async" class="img-fluid" height="{{$box_height}}" src="{{$imgWebp_src}}"
-                    alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'" />
+                  <img
+                    loading="lazy"
+                    decoding="async"
+                    class="img-fluid"
+                    height="{{$box_height}}"
+                    src="{{$imgWebp_src}}"
+                    alt="Brand Image"
+                    onerror="this.onerror=null;this.src='{{$img_src}}'"
+                  />
                 </a>
               </div>
             </div>
@@ -227,7 +265,11 @@
         </div>
       </div>
 
-      <div class="col-lg-8 col-md-10 social-widget" data-aos="fade-up" data-aos-delay="200">
+      <div
+        class="col-lg-8 col-md-10 social-widget"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
         <div class="block text-center">
           {{ with site.Params.social}}
           <ul class="social-links list-inline">
@@ -253,22 +295,50 @@
           <form id="contact-form" action="{{.}}" method="POST">
             <p id="form-status" class="form-status"></p>
             <div class="form-group">
-              <label for="name">{{$contact_page.Params.form_name_label | markdownify}}</label>
-              <input class="form-control shadow-none" id="name" name="full_name" type="text"
-                placeholder="{{$contact_page.Params.form_name_label | markdownify}}" required />
+              <label for="name"
+                >{{$contact_page.Params.form_name_label | markdownify}}</label
+              >
+              <input
+                class="form-control shadow-none"
+                id="name"
+                name="full_name"
+                type="text"
+                placeholder="{{$contact_page.Params.form_name_label | markdownify}}"
+                required
+              />
             </div>
             <div class="form-group">
-              <label for="email">{{$contact_page.Params.form_email_label | markdownify}}</label>
-              <input class="form-control shadow-none" id="email" name="email" type="email"
-                placeholder="{{$contact_page.Params.form_email_label | markdownify}}" required />
+              <label for="email"
+                >{{$contact_page.Params.form_email_label | markdownify}}</label
+              >
+              <input
+                class="form-control shadow-none"
+                id="email"
+                name="email"
+                type="email"
+                placeholder="{{$contact_page.Params.form_email_label | markdownify}}"
+                required
+              />
             </div>
             <div class="form-group">
-              <label for="message">{{$contact_page.Params.form_message_label |
-                markdownify}}</label>
-              <textarea class="form-control shadow-none" id="message" name="Comment" rows="4" required></textarea>
+              <label for="message"
+                >{{$contact_page.Params.form_message_label |
+                markdownify}}</label
+              >
+              <textarea
+                class="form-control shadow-none"
+                id="message"
+                name="Comment"
+                rows="4"
+                required
+              ></textarea>
             </div>
 
-            <button class="btn btn-primary w-100 mt-4" type="submit" aria-label="Send Message">
+            <button
+              class="btn btn-primary w-100 mt-4"
+              type="submit"
+              aria-label="Send Message"
+            >
               {{$contact_page.Params.form_button_label | markdownify}}
             </button>
           </form>
