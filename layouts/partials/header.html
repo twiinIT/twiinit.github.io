@@ -2,96 +2,105 @@
 <div class="header-height-fix"></div>
 <header class="header-nav">
   <div class="container-xxl">
-     <div class="row">
-        <div class="col-12">
-           <nav class="navbar navbar-expand-lg navbar-light p-0">
-              <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
-                {{ $logo:= site.Params.logo }}
-                {{ if fileExists (add `assets/` $logo) }}
-                {{ $logo:= resources.Get $logo }}
-                <img loading="preload" decoding="async" class="img-fluid" width="{{site.Params.logo_width}}" height="45" src="{{$logo.RelPermalink}}" alt="{{ site.Title }}" onerror="this.onerror=null;this.src='{{$logo.RelPermalink}}'">
-                {{ else }}
-                {{site.Params.logo_text | markdownify}}
-                {{ end }}
-              </a>
+    <div class="row">
+      <div class="col-12">
+        <nav class="navbar navbar-expand-lg navbar-light p-0">
+          <a class="navbar-brand" href="{{ site.BaseURL | relLangURL }}">
+            {{ $logo:= site.Params.logo }} {{ if fileExists (add `assets/`
+            $logo) }} {{ $logo:= resources.Get $logo }}
+            <img loading="preload" decoding="async" class="img-fluid" width="{{site.Params.logo_width}}" height="45"
+              src="{{$logo.RelPermalink}}" alt="{{ site.Title }}"
+              onerror="this.onerror=null;this.src='{{$logo.RelPermalink}}'" />
+            {{ else }} {{site.Params.logo_text | markdownify}} {{ end }}
+          </a>
 
-              <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navHeader" aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="d-inline lab la-buromobelexperte"></i>
-                <i class="d-none las la-times"></i>
-              </button>
+          <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navHeader"
+            aria-controls="navHeader" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="d-inline lab la-buromobelexperte"></i>
+            <i class="d-none las la-times"></i>
+          </button>
 
-	      {{ if .IsHome }}
-	        <script>
-	          const sections = document.getElementsByClassName("section");
-		  const menus = document.getElementsByClassName("nav-item");
-		  var active = 0;
-	          window.addEventListener('scroll', function(e) {
-		    if (document.documentElement.scrollTop < sections[1].offsetTop-10) {
-		      active = 0;
-		    } else {
-	  	      for (var i = sections.length-1; i > 0; i--) {
-  		        if (document.documentElement.scrollTop >= sections[i].offsetTop-10) {
-		          active = i;
-			  break;
-			}
-		      }
-		    }
-		    for (const menu of menus) {
-		      menu.classList.remove("active");
-		    }
-		    menus[active].classList.add("active");
-		  });
-	        </script>
-	      {{ end }}
-              <div class="collapse navbar-collapse" id="navHeader">
-                <ul class="navbar-nav mx-auto">                  
-                  {{ $currentPage := . }}
-                  {{ range site.Menus.main }}
+          {{ if .IsHome }}
+          <script>
+            const sections = document.getElementsByClassName("section");
+            const menus = document.getElementsByClassName("nav-item");
+            var active = 0;
+            window.addEventListener("scroll", function (e) {
+              if (
+                document.documentElement.scrollTop <
+                sections[1].offsetTop - 10
+              ) {
+                active = 0;
+              } else {
+                for (var i = sections.length - 1; i > 0; i--) {
+                  if (
+                    document.documentElement.scrollTop >=
+                    sections[i].offsetTop - 10
+                  ) {
+                    active = i;
+                    break;
+                  }
+                }
+              }
+              for (const menu of menus) {
+                menu.classList.remove("active");
+              }
+              menus[active].classList.add("active");
+            });
+          </script>
+          {{ end }}
+          <div class="collapse navbar-collapse" id="navHeader">
+            <ul class="navbar-nav mx-auto">
+              {{ $currentPage := . }} {{ range site.Menus.main }} {{
+              $menu_item_url := .URL | absLangURL }} {{ $page_url:=
+              $currentPage.Permalink | absLangURL }} {{ $active := false }} {{
+              if not $currentPage.IsHome }} {{ $active = eq $menu_item_url
+              $page_url}} {{ end }} {{ if .HasChildren }}
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
+                  aria-expanded="false">
+                  {{ .Name }}
+                </a>
+                <ul class="dropdown-menu">
+                  {{ range .Children }} {{ $drop_menu_item_url := .URL |
+                  absLangURL }} {{ $active := eq $drop_menu_item_url $page_url}}
 
-                  {{ $menu_item_url := .URL | absLangURL }}
-                  {{ $page_url:= $currentPage.Permalink | absLangURL }}
-		  {{ $active := false }}
-		  {{ if not $currentPage.IsHome }}
-                    {{ $active = eq $menu_item_url $page_url}}
-		  {{ end }}
-                  
-                  {{ if .HasChildren }}
-                  <li class="nav-item dropdown">
-
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      {{ .Name }}
-                    </a>
-                    <ul class="dropdown-menu">
-                      {{ range .Children }}
-
-                      {{ $drop_menu_item_url := .URL | absLangURL }}
-                      {{ $active := eq $drop_menu_item_url $page_url}}
-
-                      <li>
-                        <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-                        href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
-                      </li>
-                      {{ end }}
-                    </ul>
+                  <li>
+                    <a class="dropdown-item {{if $active}}active{{end}}" {{if findRE `^http` .URL}}target="_blank"
+                      rel="noopener" {{end}}
+                      href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{
+                      .Name }}</a>
                   </li>
-                  {{ else }}
-                  <li class="nav-item {{if $active}}active{{end}}">
-                    <a class="nav-link" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
-                      href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{ .Name }}</a>
-                  </li>
-                  {{ end }}
                   {{ end }}
                 </ul>
-        
-                <div class="navbar-right">
-                  {{ if site.Params.navigation_button.enable }}
-                  <a href="{{ site.Params.navigation_button.link | relURL }}" class="btn btn-primary" target="_blank">{{ site.Params.navigation_button.label }}</a>
-                  {{ end }}
-                </div>
-              </div>
-          </nav>
-        </div>
-     </div>
+              </li>
+              {{ else }}
+              <li class="nav-item {{if $active}}active{{end}}">
+                <a class="nav-link" {{if findRE `^http` .URL}}target="_blank" rel="noopener" {{end}}
+                  href="{{if findRE `^#` .URL}}{{if not $.IsHome}}{{site.BaseURL | relLangURL}}{{end}}{{ .URL }}{{else}}{{.URL | relLangURL}}{{end}}">{{
+                  .Name }}</a>
+              </li>
+              {{ end }} {{ end }}
+            </ul>
+
+            <div class="navbar-right">
+              <select onchange="if (this.value) window.location.href=this.value;" name="language"
+                class="language-selector">
+                {{ range .Site.Languages }}
+                {{ $isCurrentLang := eq $.Site.Language.Lang .Lang }}
+                {{ $translated := cond $isCurrentLang $.Page (index (where $.Page.AllTranslations "Lang" .Lang) 0) }}
+                {{ $target := cond (not (eq $translated nil)) $translated.RelPermalink (printf "/%s/" .Lang) }}
+
+                <option value="{{ $target }}" {{ if $isCurrentLang }}selected{{ end }}>
+                  {{ .Params.flag }} {{ .LanguageName }}
+                </option>
+                {{ end }}
+              </select>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
   </div>
 </header>
 <!-- /navigation -->

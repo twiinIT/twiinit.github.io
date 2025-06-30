@@ -1,3 +1,4 @@
+
 <!-- JS Plugins + Main script -->
 {{ $scripts := slice }}
 {{ range site.Params.plugins.js}}
@@ -70,19 +71,5 @@
     active: () => {
       sessionStorage.fontsLoaded = true
     }
-  });
-</script>
-
-<script>
-  anime({
-    targets: '.navbar-right',
-    scale: {
-      value: [1., 0.8],
-      easing: 'easeInOutQuart'
-    },
-    duration: 500,
-    delay: 2500,
-    loop: true,
-    direction: 'alternate',
   });
 </script>

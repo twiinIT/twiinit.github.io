@@ -1,10 +1,10 @@
 <article class="card blog-card">
   <div class="card-body">
-    <h3 class="card-title"><a title="{{ .Title }}" href="{{ .Params.article_url }}" >{{ .Title }} </a>
+    <h3 class="card-title"><a title="{{ .Title }}" href="{{ .RelPermalink }}">{{ .Title }} </a>
     </h3>
     <p>{{ .Params.subtitle }} </p>
   </div>
-  <a title="{{ .Title }}" href="{{ .Params.article_url }}" >
+  <a title="{{ .Title }}" href="{{ .RelPermalink }}">
     {{ if .Params.image }}
     {{ with .Params.image }}
     {{ if fileExists (add `assets/` .) }}
@@ -13,8 +13,8 @@
     {{$imgO:= $imgO.Fill "570x310 Center gif"}}
     {{$img:= $img.Fill "570x310 Center gif"}}
     {{$imgWebp:= $img.Fill "570x300 Center webp"}}
-    <img loading="lazy" decoding="async" width="570" src="{{$imgO.RelPermalink}}"
-      alt="portfolio-item" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+    <img loading="lazy" decoding="async" width="570" src="{{$imgO.RelPermalink}}" alt="portfolio-item"
+      onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
     {{end}}
     {{end}}
     {{end}}
