@@ -1,12 +1,11 @@
-{{define "main"}} {{with .Params.banner}}
+{{define "main"}}
+
+{{with .Params.banner}}
 <section class="banner">
   <div class="container-xxl">
     <div class="row text-center">
       <div class="col-12">
-        <div
-          class="block row justify-content-center no-gutters"
-          data-aos="fade-up"
-        >
+        <div class="block row justify-content-center no-gutters" data-aos="fade-up">
           <div class="col-lg-10 px-0 px-xl-4" data-rellax-speed="-3">
             <h1 class="mb-4" data-aos="fade-up">{{.title | markdownify}}</h1>
             <!--<a href="{{.button_link}}" class="btn btn-primary" data-aos="fade-up" data-aos-delay="200">{{.button}}</a>-->
@@ -17,16 +16,10 @@
         <div class="banner-image" data-aos="fade-up" data-aos-delay="300">
           <div class="row justify-content-center">
             <div class="col-lg-10">
-              {{$img:= resources.Get . }} {{$img:= $img.Resize "1020x webp"}}
-              <img
-                loading="lazy"
-                decoding="async"
-                class="w-100 img-fluid"
-                width="{{$img.Width}}"
-                height="{{$img.Height}}"
-                src="{{$img.RelPermalink}}"
-                alt="Banner Image"
-              />
+              {{$img:= resources.Get . }}
+              {{$img:= $img.Resize "1020x webp"}}
+              <img loading="lazy" decoding="async" class="w-100 img-fluid" width="{{$img.Width}}"
+                height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="Banner Image">
             </div>
           </div>
         </div>
@@ -48,7 +41,9 @@
     </div>
   </div>
 </section>
-{{end}} {{with .Site.GetPage "services"}}
+{{end}}
+
+{{with .Site.GetPage "services"}}
 <section class="section features overflow-hidden" id="services">
   <div class="container">
     <div class="row">
@@ -84,7 +79,9 @@
     </div>
   </div>
 </section>
-{{end}} {{with .Site.GetPage "team"}}
+{{end}}
+
+{{with .Site.GetPage "team"}}
 <section class="section" id="team">
   <div class="container">
     <div class="row">
@@ -101,19 +98,13 @@
       <div class="col-lg-3 col-md-4 col-6">
         <div class="team-item text-center">
           <div class="team-image">
-            {{ if fileExists (add `assets/` .Params.image) }} {{$img:=
-            resources.Get .Params.image }} {{$img:= $img.Resize "175x "}}
+            {{ if fileExists (add `assets/` .Params.image) }}
+            {{$img:= resources.Get .Params.image }}
+            {{$img:= $img.Resize "175x "}}
             {{$imgWebp:= $img.Resize "175x webp"}}
-            <img
-              loading="lazy"
-              decoding="async"
-              class="w-100 img-fluid rounded-circle"
-              width="{{$img.Width}}"
-              height="{{$img.Height}}"
-              src="{{$imgWebp.RelPermalink}}"
-              alt="Team Image"
-              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'"
-            />
+            <img loading="lazy" decoding="async" class="w-100 img-fluid rounded-circle" width="{{$img.Width}}"
+              height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Team Image"
+              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
             {{end}}
           </div>
           <h3>{{.Params.name | markdownify}}</h3>
@@ -124,7 +115,9 @@
     </div>
   </div>
 </section>
-{{end}} {{with .Site.GetPage "advisors"}}
+{{end}}
+
+{{with .Site.GetPage "advisors"}}
 <section class="section" id="advisors">
   <div class="container">
     <div class="row">
@@ -141,19 +134,13 @@
       <div class="col-lg-3 col-md-4 col-6">
         <div class="team-item text-center">
           <div class="team-image">
-            {{ if fileExists (add `assets/` .Params.image) }} {{$img:=
-            resources.Get .Params.image }} {{$img:= $img.Resize "175x "}}
+            {{ if fileExists (add `assets/` .Params.image) }}
+            {{$img:= resources.Get .Params.image }}
+            {{$img:= $img.Resize "175x "}}
             {{$imgWebp:= $img.Resize "175x webp"}}
-            <img
-              loading="lazy"
-              decoding="async"
-              class="w-100 img-fluid rounded-circle"
-              width="{{$img.Width}}"
-              height="{{$img.Height}}"
-              src="{{$imgWebp.RelPermalink}}"
-              alt="Team Image"
-              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'"
-            />
+            <img loading="lazy" decoding="async" class="w-100 img-fluid rounded-circle" width="{{$img.Width}}"
+              height="{{$img.Height}}" src="{{$imgWebp.RelPermalink}}" alt="Team Image"
+              onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
             {{end}}
           </div>
           <h3>{{.Params.name | markdownify}}</h3>
@@ -164,7 +151,9 @@
     </div>
   </div>
 </section>
-{{end}} {{with .Site.GetPage "customers"}}
+{{end}}
+
+{{with .Site.GetPage "customers"}}
 <section class="section" id="customers">
   <div class="container">
     <div class="row">
@@ -180,36 +169,40 @@
       <div class="col-md-12 text-center" data-aos="fade-in">
         <div class="brand-carousel swiper-container">
           <div class="swiper-wrapper align-items-center">
-            {{range .Resources}} {{if fileExists (add `assets/` .Params.image)}}
+            {{range .Resources}}
+            {{if fileExists (add `assets/` .Params.image)}}
             <div class="swiper-slide" disableOnInteraction="false">
               <div class="brand-item">
-                {{$img:= resources.Get .Params.image}} {{$img_width :=
-                $img.Width }} {{$box_width := "400"}} {{$box_height := "200"}}
-                {{$box_aspect := add (add (string $box_width) "x") (string
-                $box_height)}} {{$img_src := ($img.Fit $box_aspect).RelPermalink
-                }} {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
+                {{$img:= resources.Get .Params.image}}
+                {{$img_width := $img.Width }}
+                
+                {{$box_width := "400"}}
+                {{$box_height := "200"}}
+                {{$box_aspect := add (add (string $box_width) "x") (string $box_height)}}
 
+                {{$img_src := ($img.Fit $box_aspect).RelPermalink }}
+
+                {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
+                
                 <a href="{{.Params.external_url}}" target="_blank">
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    class="img-fluid"
-                    height="{{$box_height}}"
-                    src="{{$imgWebp_src}}"
-                    alt="Brand Image"
-                    onerror="this.onerror=null;this.src='{{$img_src}}'"
-                  />
+                  <img loading="lazy" decoding="async" class="img-fluid" height="{{$box_height}}"
+                    src="{{$imgWebp_src}}" alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'">
                 </a>
               </div>
             </div>
-            {{end}} {{end}}
+            {{end}}
+            {{end}}
+            
+            
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-{{end}} {{with .Site.GetPage "support"}}
+{{end}}
+
+{{with .Site.GetPage "support"}}
 <section class="section" id="support">
   <div class="container">
     <div class="row">
@@ -225,128 +218,132 @@
       <div class="col-md-12 text-center" data-aos="fade-in">
         <div class="brand-carousel swiper-container">
           <div class="swiper-wrapper align-items-center">
-            {{range .Resources}} {{if fileExists (add `assets/` .Params.image)}}
+            {{range .Resources}}
+            {{if fileExists (add `assets/` .Params.image)}}
             <div class="swiper-slide" disableOnInteraction="false">
               <div class="brand-item">
-                {{$img:= resources.Get .Params.image}} {{$img_width :=
-                $img.Width }} {{$box_width := "400"}} {{$box_height := "200"}}
-                {{$box_aspect := add (add (string $box_width) "x") (string
-                $box_height)}} {{$img_src := ($img.Fit $box_aspect).RelPermalink
-                }} {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
+                {{$img:= resources.Get .Params.image}}
+                {{$img_width := $img.Width }}
+                
+                {{$box_width := "400"}}
+                {{$box_height := "200"}}
+                {{$box_aspect := add (add (string $box_width) "x") (string $box_height)}}
 
+                {{$img_src := ($img.Fit $box_aspect).RelPermalink }}
+
+                {{$imgWebp_src := ($img.Fit $box_aspect).RelPermalink }}
+                
                 <a href="{{.Params.external_url}}" target="_blank">
-                  <img
-                    loading="lazy"
-                    decoding="async"
-                    class="img-fluid"
-                    height="{{$box_height}}"
-                    src="{{$imgWebp_src}}"
-                    alt="Brand Image"
-                    onerror="this.onerror=null;this.src='{{$img_src}}'"
-                  />
+                  <img loading="lazy" decoding="async" class="img-fluid" height="{{$box_height}}"
+                    src="{{$imgWebp_src}}" alt="Brand Image" onerror="this.onerror=null;this.src='{{$img_src}}'">
                 </a>
               </div>
             </div>
-            {{end}} {{end}}
+            {{end}}
+            {{end}}
+            
+            
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
-{{end}} {{with .Site.GetPage "contact"}}
+{{end}}
+
 <section class="section" id="contact">
   <div class="container">
     <div class="row justify-content-center align-items-center">
       <div class="col-12">
         <div class="section-title text-center" data-aos="fade-up">
-          <p class="text-uppercase">{{.Params.title | markdownify}}</p>
-          <h2 class="title">{{.Params.subtitle | markdownify}}</h2>
+          <p class="text-uppercase">Contact us</p>
+          <h2 class="title">Get In Touch</h2>
         </div>
       </div>
 
-      <div
-        class="col-lg-8 col-md-10 social-widget"
-        data-aos="fade-up"
-        data-aos-delay="200"
-      >
+      <div class="col-lg-8 col-md-10 social-widget" data-aos="fade-up" data-aos-delay="200">
         <div class="block text-center">
           {{ with site.Params.social}}
           <ul class="social-links list-inline">
             {{ range .}}
-            <li class="list-inline-item">
-              <a href="{{.link}}" title="{{.title}}" target="_blank">
+            <li class="list-inline-item"><a href="{{.link}}" title="{{.title}}" target="_blank">
                 <i class="{{.icon}}"></i>
-              </a>
-            </li>
+              </a></li>
             {{end}}
           </ul>
           {{end}}
         </div>
       </div>
 
-      {{with site.Params.contact_form_action}} {{$contact_page := $.Site.GetPage
-      "contact"}}
+      {{with site.Params.contact_info.phone}}
+      <div class="col-xl-3 col-lg-4 col-md-6 contact-widget" data-aos="fade-up">
+        <div class="block text-center">
+          <h3 class="mb-4">Phone</h3>
+          <ul class="list-unstyled">
+            {{range .}}
+            {{if .}}
+            <li><a href="tel:{{.}}"><i class="las la-phone"></i>{{.}}</a></li>
+            {{end}}
+            {{end}}
+          </ul>
+        </div>
+      </div>
+      {{end}}
+
+      {{with site.Params.contact_info.email}}
+      <div class="col-xl-3 col-lg-4 col-md-6 contact-widget" data-aos="fade-up" data-aos-delay="100">
+        <div class="block text-center">
+          <h3 class="mb-4">Email Address</h3>
+          <ul class="list-unstyled">
+            {{range .}}
+            {{if .}}
+            <li><a href="mailto:{{.}}"><i class="las la-envelope-open-text"></i>{{.}}</a></li>
+            {{end}}
+            {{end}}
+          </ul>
+        </div>
+      </div>
+      {{end}}
+
+      <!--<div class="col-lg-5 col-md-8 text-center mb-5 mb-lg-0" data-aos="fade-up">
+        <div class="pr-0 pr-lg-5">
+          {{ if fileExists (add `assets/` .Params.contact_image) }}
+          {{$img:= resources.Get .Params.contact_image }}
+          {{$img:= $img.Resize "575x"}}
+          <img loading="lazy" decoding="async" class="img-fluid" width="{{$img.Width}}" height="{{$img.Height}}" src="{{$img.RelPermalink}}" alt="cobtact image" onerror="this.onerror=null;this.src='{{$img.RelPermalink}}'">
+          {{end}}
+        </div>
+      </div>-->
+      {{with site.Params.contact_form_action}}
       <div class="col-lg-8 col-md-10" data-aos="fade-up">
         <div class="contact-form">
           <div class="mb-4">
-            <h3>{{$contact_page.Params.form_title | markdownify}}</h3>
+            <h3>Send A Message</h3>
           </div>
           <form id="contact-form" action="{{.}}" method="POST">
             <p id="form-status" class="form-status"></p>
             <div class="form-group">
-              <label for="name"
-                >{{$contact_page.Params.form_name_label | markdownify}}</label
-              >
-              <input
-                class="form-control shadow-none"
-                id="name"
-                name="full_name"
-                type="text"
-                placeholder="{{$contact_page.Params.form_name_label | markdownify}}"
-                required
-              />
+              <label for="name">Full Name</label>
+              <input class="form-control shadow-none" id="name" name="full_name" type="text" placeholder="Full Name"
+                required>
             </div>
             <div class="form-group">
-              <label for="email"
-                >{{$contact_page.Params.form_email_label | markdownify}}</label
-              >
-              <input
-                class="form-control shadow-none"
-                id="email"
-                name="email"
-                type="email"
-                placeholder="{{$contact_page.Params.form_email_label | markdownify}}"
-                required
-              />
+              <label for="email">Email Address</label>
+              <input class="form-control shadow-none" id="email" name="email" type="email" placeholder="Email Address"
+                required>
             </div>
             <div class="form-group">
-              <label for="message"
-                >{{$contact_page.Params.form_message_label |
-                markdownify}}</label
-              >
-              <textarea
-                class="form-control shadow-none"
-                id="message"
-                name="Comment"
-                rows="4"
-                required
-              ></textarea>
+              <label for="message">Your Message</label>
+              <textarea class="form-control shadow-none" id="message" name="Comment" rows="4" required></textarea>
             </div>
 
-            <button
-              class="btn btn-primary w-100 mt-4"
-              type="submit"
-              aria-label="Send Message"
-            >
-              {{$contact_page.Params.form_button_label | markdownify}}
-            </button>
+            <button class="btn btn-primary w-100 mt-4" type="submit" aria-label="Send Message">Send Message</button>
           </form>
         </div>
       </div>
 
       <script>
-        var form = document.getElementById("contact-form");
+        var form = document.getElementById('contact-form');
         async function handleSubmit(event) {
           event.preventDefault();
           var status = document.getElementById("form-status");
@@ -355,23 +352,20 @@
             method: form.method,
             body: data,
             headers: {
-              Accept: "application/json",
-            },
-          })
-            .then((response) => {
-              status.innerHTML =
-                "{{$contact_page.Params.form_success_message | markdownify}}";
-              form.reset();
-            })
-            .catch((error) => {
-              status.innerHTML =
-                "{{$contact_page.Params.form_error_message | markdownify}}";
-            });
+              'Accept': 'application/json'
+            }
+          }).then(response => {
+            status.innerHTML = "Thanks for your submission!";
+            form.reset()
+          }).catch(error => {
+            status.innerHTML = "Oops! There was a problem submitting your form";
+          });
         }
-        form.addEventListener("submit", handleSubmit);
+        form.addEventListener("submit", handleSubmit)
       </script>
       {{end}}
     </div>
   </div>
 </section>
-{{end}} {{end}}
+
+{{end}}
