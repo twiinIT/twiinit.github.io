@@ -1,35 +1,35 @@
 # French main menu
 [[main]]
 name = "Services"
-url = "#services"
+url = "fr/#services"
 weight = 2
 
 [[main]]
 name = "Équipe"
-url = "#team"
+url = "fr/#team"
 weight = 3
 
 [[main]]
 name = "Partenaires"
-url = "#customers"
+url = "fr/#customers"
 weight = 4
 
 [[main]]
 name = "Portefeuille"
-url = "portfolio/"
+url = "fr/portfolio/"
 weight = 5
 
 [[main]]
 name = "Blog"
-url = "blog/"
+url = "fr/blog/"
 weight = 6
 
 [[main]]
 name = "Vidéos"
-url = "videos/"
+url = "fr/videos/"
 weight = 7
 
 [[main]]
 name = "Contact"
-url = "#contact"
+url = "fr/#contact"
 weight = 8 
