@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>twiinIT</title><link>https://twiinit.com/fr/</link><description>Recent content on twiinIT</description><generator>Hugo</generator><language>fr</language><lastBuildDate>Wed, 23 Mar 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://twiinit.com/fr/index.xml" rel="self" type="application/rss+xml"/><item><title>bibliothèque pyturbo</title><link>https://twiinit.com/fr/portfolio/2023/pyturbo/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://twiinit.com/fr/portfolio/2023/pyturbo/</guid><description>&lt;h3 id="objectifs">Objectifs&lt;/h3>
+&lt;ul>
+&lt;li>Démontrer les capacités de modélisation et de conception basées sur CoSApp.&lt;/li>
+&lt;li>Fournir une bibliothèque Open-Source de turboréacteurs pour la formation et comme bloc de base de workflows de simulations avancées.&lt;/li>
+&lt;/ul>
+&lt;h3 id="état-actuel">État actuel&lt;/h3>
+&lt;ul>
+&lt;li>Une architecture de turboréacteur (2 arbres) est couverte depuis la physique/composants uniques jusqu&amp;rsquo;au produit complet, en utilisant des assemblages intermédiaires modulaires.&lt;/li>
+&lt;li>Plusieurs stratégies de conception hors-design et de conception sont disponibles sous forme de workflows numériques.&lt;/li>
+&lt;/ul>
+&lt;h3 id="perspectives">Perspectives&lt;/h3>
+&lt;ul>
+&lt;li>Ajouter des modélisations et architectures alternatives.&lt;/li>
+&lt;li>Améliorer l&amp;rsquo;expérience d&amp;rsquo;apprentissage avec des tutoriels du débutant à l&amp;rsquo;avancé.&lt;/li>
+&lt;/ul>
+&lt;div class='row'>
+&lt;div class='col-lg-5 col-md-5 col-12' text-align='center'>
+ &lt;div class='imgbox'>
+ &lt;figure class="center-fit">&lt;img src="https://twiinit.com/images/portfolio/pyturbo_icon.gif" width="100%">
+ &lt;/figure>
+
+ &lt;/div>
+ &lt;center>&lt;p> Moteur turboréacteur mis à l'échelle par l'utilisateur en temps réel.&lt;/p></description></item><item><title>Tableurs d'ingénierie</title><link>https://twiinit.com/fr/videos/connect_models/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://twiinit.com/fr/videos/connect_models/</guid><description>&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/1tts66Qptok?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div></description></item><item><title>Connectez vos modèles</title><link>https://twiinit.com/fr/videos/eng_spreadsheets/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://twiinit.com/fr/videos/eng_spreadsheets/</guid><description>&lt;div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
+ &lt;iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NCobqiYTEmA?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+ >&lt;/iframe>
+ &lt;/div></description></item><item><title>Complément Excel Elixair</title><link>https://twiinit.com/fr/portfolio/2024/elixair/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://twiinit.com/fr/portfolio/2024/elixair/</guid><description>&lt;h3 id="objectifs">Objectifs&lt;/h3>
+&lt;ul>
+&lt;li>Fournir des feuilles de calcul standardisées et modélisées interfacées avec notre outil de simulation.&lt;/li>
+&lt;li>Un jumeau numérique d&amp;rsquo;un puits climatique basé sur des modèles standards pour calculer les économies d&amp;rsquo;énergie sur une année.&lt;/li>
+&lt;/ul>
+&lt;h3 id="la-feuille-de-calcul">La feuille de calcul&lt;/h3>
+&lt;ul>
+&lt;li>À partir de quelques entrées, l&amp;rsquo;utilisateur obtient instantanément les résultats de la simulation intégrés dans sa feuille de calcul (température de sortie, économies d&amp;rsquo;énergie et pertes de charge).&lt;/li>
+&lt;li>Il sait qu&amp;rsquo;elle respecte la norme qu&amp;rsquo;il doit suivre et peut exporter tous les résultats directement dans un rapport modélisé.&lt;/li>
+&lt;li>Support linguistique étendu en français, anglais, allemand et espagnol en un seul clic.&lt;/li>
+&lt;/ul>
+&lt;h3 id="perspectives">Perspectives&lt;/h3>
+&lt;ul>
+&lt;li>Un outil entièrement personnalisé que vous pouvez facilement contrôler.&lt;/li>
+&lt;li>Tout ce dont vous avez besoin est rassemblé sur la même page et disponible en un clic.&lt;/li>
+&lt;li>Le moteur de jumeau numérique est testé et robuste. Il est même extensible si vous devez y connecter un nouvel outil !&lt;/li>
+&lt;/ul>
+&lt;div class='row'>
+&lt;div class='col-lg-7 col-md-12 col-12' text-align='center'>
+ &lt;div class='imgbox'>
+ &lt;figure class="center-fit">&lt;img src="https://twiinit.com/images/portfolio/elixair_video.gif" width="100%">
+ &lt;/figure>
+
+ &lt;/div>
+ &lt;center>&lt;p> Version réduite de la feuille de calcul Elixair et interaction utilisateur.&lt;/p></description></item><item><title>Optimiser le produit dans son ensemble</title><link>https://twiinit.com/fr/blog/optim/</link><pubDate>Wed, 23 Mar 2022 00:00:00 +0000</pubDate><guid>https://twiinit.com/fr/blog/optim/</guid><description>&lt;p>Le meilleur produit n&amp;rsquo;est pas la collection des meilleures parties (&amp;hellip;)&lt;/p></description></item></channel></rss>
