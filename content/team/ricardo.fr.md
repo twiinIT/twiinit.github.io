@@ -2,5 +2,5 @@
 name: "Ricardo Oliveira"
 designation: "Ingénieur Logiciel Scientifique"
 image: "images/team/ricardo.jpg"
-weight: 7
+weight: 8
 --- 
